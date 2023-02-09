@@ -1,2 +1,55 @@
 @import url(./reset.css);
 @import url(./common.css);
+
+header {
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.gnb li {
+  margin-left: 30px;
+}
+
+.side_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side_nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.side_nav a {
+  color: gray;
+}
+
+/* .side_nav li:not(.side_nav li:last-child) {
+  padding: 0 15px;
+  border-right: 2px solid #eee;
+} */
+
+.side_nav li {
+  padding: 0 15px;
+  border-right: 2px solid #eee;
+}
+
+.side_nav li:nth-child(4) {
+  border: 0;
+}
+
+.bar {
+  font-size: 30px;
+  margin-left: 20px;
+}
