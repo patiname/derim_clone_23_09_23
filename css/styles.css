@@ -143,3 +143,174 @@
     opacity: 1;
   }
 }
+/* section_2 end */
+
+.section_3 {
+  padding: 100px 0;
+}
+
+.con_wrap_3 {
+  margin-top: 50px;
+  height: 800px;
+  background-color: teal;
+  position: relative;
+}
+
+.line_3 {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  bottom: 212px;
+  z-index: 8;
+}
+
+.con_menu_3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 50px;
+  position: absolute;
+  bottom: 120px;
+  z-index: 8;
+}
+
+/* ########################
+li 대신 클래스명으로 변경
+######################## */
+.con_menu_3 .menu {
+  width: 15%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(63, 108, 246, 0);
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  transition: 0.5s;
+}
+
+.con_menu_3 .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 30px 0 20px 0;
+}
+/* 
+.bg_wrap_3 {
+  
+} */
+
+.bg_3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  opacity: 0;
+}
+
+.bg_3:nth-child(1) {
+  background: no-repeat url(https://www.daelimbath.com/img/sec02_bg_0.png)
+    center / cover;
+}
+
+.bg_3:nth-child(2) {
+  background: no-repeat url(https://www.daelimbath.com/img/sec02_bg_1.png)
+    center / cover;
+}
+
+.bg_3:nth-child(3) {
+  background: no-repeat url(https://www.daelimbath.com/img/sec02_bg_2.png)
+    center / cover;
+}
+
+.bg_3:nth-child(4) {
+  background: no-repeat url(https://www.daelimbath.com/img/sec02_bg_3.png)
+    center / cover;
+}
+
+.bg_3:nth-child(5) {
+  background: no-repeat url(https://www.daelimbath.com/img/sec02_bg_4.png)
+    center / cover;
+}
+
+.bg_3:nth-child(6) {
+  background: no-repeat url(https://www.daelimbath.com/img/sec02_bg_0.png)
+    center / cover;
+}
+
+.bg_3 .title_wrap_3 {
+  text-align: center;
+  color: white;
+}
+
+.title_wrap_3 h4 {
+  font-size: 18px;
+}
+
+.title_wrap_3 h3 {
+  font-size: 50px;
+  margin: 30px 0;
+}
+
+.title_wrap_3 p {
+  margin: 0 auto;
+  max-width: 390px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.con_menu_3 .menu:hover {
+  background-color: rgba(63, 108, 246, 1);
+}
+
+/* #######################
+input 태그 안보이게 가리기
+####################### */
+input {
+  display: none;
+}
+
+/* ###########################
+input태그에 hover하면 형제 선택자를 이용하여 이벤트 처리
+
+이전 이벤트 오류는 최종적으로 li를 선택하여 같은 형제라인으로 bg_wrap_3을 선택 하였지만
+li의 형제가 아니기 때문에 이벤트가 발생하지 않았음 
+########################### */
+#input_menu_1:checked ~ .bg_wrap_3 .bg_3:nth-child(1) {
+  opacity: 1;
+}
+/* =>첫번째 이미지는 첫페이지에 무조건 보여야 되므로 hover가 아닌 checked로 사용 */
+
+#input_menu_1:hover ~ .bg_wrap_3 .bg_3:nth-child(1) {
+  opacity: 1;
+}
+
+#input_menu_2:hover ~ .bg_wrap_3 .bg_3:nth-child(2) {
+  opacity: 1;
+}
+
+#input_menu_3:hover ~ .bg_wrap_3 .bg_3:nth-child(3) {
+  opacity: 1;
+}
+
+#input_menu_4:hover ~ .bg_wrap_3 .bg_3:nth-child(4) {
+  opacity: 1;
+}
+
+#input_menu_5:hover ~ .bg_wrap_3 .bg_3:nth-child(5) {
+  opacity: 1;
+}
+
+#input_menu_6:hover ~ .bg_wrap_3 .bg_3:nth-child(6) {
+  opacity: 1;
+}
