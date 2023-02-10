@@ -1,6 +1,7 @@
 @import url(./reset.css);
 @import url(./common.css);
 @import url(./header.css);
+@import url(./common.css);
 
 .section_1 {
   height: 90vh;
@@ -56,3 +57,89 @@
   }
 }
 /* section_1 end */
+
+.section_2 {
+  padding: 100px;
+}
+
+.con_wrap_2 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.con_2 {
+  width: 24%;
+  background-color: gray;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+}
+
+.black_bg_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 25px;
+  color: white;
+  font-weight: 700;
+  transition: 0.5s ease-in;
+}
+
+.black_bg_2 .top_title {
+  font-size: 26px;
+  display: inline;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  transition: 0.5s;
+}
+
+.black_bg_2 .bottom_title {
+  font-size: 28px;
+  position: absolute;
+  bottom: 25px;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.con_2:hover {
+  transform: scale(1.05);
+}
+
+.con_2:hover .black_bg_2 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.con_2:hover .top_title {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+
+.con_2:hover .black_bg_2 .bottom_title {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .section_2 {
+    padding: 100px 20px;
+  }
+
+  .con_wrap_2 {
+    flex-direction: column;
+  }
+
+  .con_2 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .black_bg_2 .top_title {
+    border-bottom: 3px solid rgba(255, 255, 255, 1);
+  }
+
+  .black_bg_2 .bottom_title {
+    opacity: 1;
+  }
+}
